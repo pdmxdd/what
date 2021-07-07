@@ -6,17 +6,11 @@ import org.junit.jupiter.api.Test;
 
 public class EmployerTests {
 
-    private static final Employer noArgEmployer = new Employer();
     private static final Employer oneArgEmployer = new Employer("Seaworld");
 
     @Test
-    public void noArgConstructorTest() {
-        Assertions.assertEquals(1, noArgEmployer.getId());
-    }
-
-    @Test
     public void oneArgConstructorTest() {
-        Assertions.assertEquals(2, oneArgEmployer.getId());
+        Assertions.assertEquals(1, oneArgEmployer.getId());
     }
 
     @Test
@@ -24,8 +18,4 @@ public class EmployerTests {
         Assertions.assertEquals("Seaworld", oneArgEmployer.toString());
     }
 
-    @Test
-    public void testNotEquals() {
-        Assertions.assertFalse(noArgEmployer.equals(oneArgEmployer));
-    }
 }
