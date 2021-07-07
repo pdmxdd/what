@@ -39,10 +39,8 @@ public class JobTests {
     @Test
     public void testToStringContainsBlankLines() {
         Job testJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        String[] splitStringArray = testJob.toString().split("\n");
-        Assertions.assertEquals("", splitStringArray[0]);
-        // hacky workaround:
-        Assertions.assertEquals(" ", splitStringArray[splitStringArray.length - 1]);
+        Assertions.assertEquals('\n', testJob.toString().charAt(0));
+        Assertions.assertEquals('\n', testJob.toString().charAt(testJob.toString().length() - 1));
     }
 
     @Test

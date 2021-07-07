@@ -50,7 +50,7 @@ public class Job {
                 "Employer: " + (employer != null ? employer : notFound) + "\n" +
                 "Location: " + (location != null ? location : notFound) + "\n" +
                 "Position Type: " + (positionType != null ? positionType : notFound) + "\n" +
-                "CoreCompetency: " + (coreCompetency != null ? coreCompetency : notFound) + "\n" + " ";
+                "CoreCompetency: " + (coreCompetency != null ? coreCompetency : notFound) + "\n";
     }
 // DONE: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID and id.
 
