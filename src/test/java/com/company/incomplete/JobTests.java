@@ -33,4 +33,20 @@ public class JobTests {
         Job testJobTwo = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         Assertions.assertFalse(testJobOne.equals(testJobTwo));
     }
+
+    @Test
+    public void testToStringContainsBlankLines() {
+        Job testJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        String[] splitStringArray = testJob.toString().split("\n");
+        Assertions.assertEquals("", splitStringArray[0]);
+        Assertions.assertEquals("", splitStringArray[splitStringArray.length - 1]);
+    }
+
+//    @Test
+//    public void testToStringHasLabelsForEachField() {
+//    }
+//
+//    @Test
+//    public void testToStringDataNotAvailable() {
+//    }
 }
