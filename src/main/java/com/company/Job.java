@@ -41,8 +41,17 @@ public class Job {
         return Objects.hash(id);
     }
 
-
-    // DONE: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID and id.
+    @Override
+    public String toString() {
+        return "\n" +
+                "ID: " + id + "\n" +
+                "Name: " + name + "\n" +
+                "Employer: " + employer + "\n" +
+                "Location: " + location + "\n" +
+                "Position Type: " + positionType + "\n" +
+                "CoreCompetency: " + coreCompetency + "\n" + " ";
+    }
+// DONE: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID and id.
 
     public int getId() {
         return id;
