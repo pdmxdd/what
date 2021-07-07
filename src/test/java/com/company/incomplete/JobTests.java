@@ -46,9 +46,16 @@ public class JobTests {
         Assertions.assertEquals(" ", splitStringArray[splitStringArray.length - 1]);
     }
 
-//    @Test
-//    public void testToStringHasLabelsForEachField() {
-//    }
+    @Test
+    public void testToStringHasLabelsForEachField() {
+        Job testJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        String[] splitStringArray = testJob.toString().split("\n");
+        Assertions.assertEquals("Name: Product tester", splitStringArray[2]);
+        Assertions.assertEquals("Employer: ACME", splitStringArray[3]);
+        Assertions.assertEquals("Location: Desert", splitStringArray[4]);
+        Assertions.assertEquals("Position Type: Quality control", splitStringArray[5]);
+        Assertions.assertEquals("CoreCompetency: Persistence", splitStringArray[6]);
+    }
 //
 //    @Test
 //    public void testToStringDataNotAvailable() {
