@@ -40,7 +40,6 @@ public class JobTests {
     public void testToStringContainsBlankLines() {
         Job testJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         String[] splitStringArray = testJob.toString().split("\n");
-        System.out.println(Arrays.toString(splitStringArray));
         Assertions.assertEquals("", splitStringArray[0]);
         // hacky workaround:
         Assertions.assertEquals(" ", splitStringArray[splitStringArray.length - 1]);
@@ -55,9 +54,17 @@ public class JobTests {
         Assertions.assertEquals("Location: Desert", splitStringArray[4]);
         Assertions.assertEquals("Position Type: Quality control", splitStringArray[5]);
         Assertions.assertEquals("CoreCompetency: Persistence", splitStringArray[6]);
+
     }
-//
-//    @Test
-//    public void testToStringDataNotAvailable() {
-//    }
+
+    @Test
+    public void testToStringDataNotAvailable() {
+        Job testJob = new Job();
+        String[] splitStringArray = testJob.toString().split("\n");
+        Assertions.assertEquals("Name: Data not available", splitStringArray[2]);
+        Assertions.assertEquals("Employer: Data not available", splitStringArray[3]);
+        Assertions.assertEquals("Location: Data not available", splitStringArray[4]);
+        Assertions.assertEquals("Position Type: Data not available", splitStringArray[5]);
+        Assertions.assertEquals("CoreCompetency: Data not available", splitStringArray[6]);
+    }
 }

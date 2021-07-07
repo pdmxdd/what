@@ -43,13 +43,14 @@ public class Job {
 
     @Override
     public String toString() {
+        String notFound = "Data not available";
         return "\n" +
                 "ID: " + id + "\n" +
-                "Name: " + name + "\n" +
-                "Employer: " + employer + "\n" +
-                "Location: " + location + "\n" +
-                "Position Type: " + positionType + "\n" +
-                "CoreCompetency: " + coreCompetency + "\n" + " ";
+                "Name: " + (name != null ? name : notFound) + "\n" +
+                "Employer: " + (employer != null ? employer : notFound) + "\n" +
+                "Location: " + (location != null ? location : notFound) + "\n" +
+                "Position Type: " + (positionType != null ? positionType : notFound) + "\n" +
+                "CoreCompetency: " + (coreCompetency != null ? coreCompetency : notFound) + "\n" + " ";
     }
 // DONE: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID and id.
 
