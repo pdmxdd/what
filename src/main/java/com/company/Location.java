@@ -13,7 +13,7 @@ public class Location {
         nextId++;
     }
 
-    // TODO: Add a constructor that takes a string as a parameter and assigns it to the 'value' field. The constructors should also call the empty constructor in order to initialize the 'id' field.
+    // DONE: Add a constructor that takes a string as a parameter and assigns it to the 'value' field. The constructors should also call the empty constructor in order to initialize the 'id' field.
     public Location(String value) {
         this();
         this.value = value;
